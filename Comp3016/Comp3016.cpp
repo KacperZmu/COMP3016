@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include "Game.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    srand(time(NULL));
+
+    Game game;
+    game.initGame();
+
+    while (game.getRunning())
+    {
+        game.mainMenu();
+    }
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
