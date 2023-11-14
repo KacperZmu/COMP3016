@@ -16,6 +16,7 @@ public:
 	//Functions
 	void initGame();
 	void mainMenu();
+	void PlayGame();
 
 	//Accessors
 	inline bool getRunning() const { return this->running; }
@@ -23,6 +24,8 @@ public:
 private:
 	int choice;
 	bool running;
+	int playChoice;
+	bool playStarted;
 
 	//Character
 	Character character;
