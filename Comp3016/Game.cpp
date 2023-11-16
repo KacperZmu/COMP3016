@@ -162,20 +162,9 @@ void Game::PlayGame(const std::string& playerName)
 
 void Game::LeftCreature()
 {
-	cout << "As you cautiously veer right, your gaze fixates on the mysterious" << endl;
-	cout << "creature lurking in the shadows. The air thickens with an eerie" << endl;
-	cout << "tension, and an unnatural stillness envelopes the space around you. " << endl;
-	cout << "The creature, a silhouette of twisted forms and gleaming eyes " << endl;
-	cout << "emerges slowly from the darkness. " << endl << endl; 
-	cout << "A low, gutteral growl resonates through the air, sending shivers " << endl;
-	cout << "down your spine. The creatures' eyes lock onto yours. " << endl;
-	cout << "Its' features obscured by the foggy veil. Inseed whispers " << endl;
-	cout << "seem to emanate from its presence, weaving a chilling tapestry of " << endl;
-	cout << "unknown horrors. " << endl << endl; 
-	cout << "Will you face the ominous being, risking the unknown danger " << endl;
-	cout << "it may pose, or wisely choose to retreat. " << endl;
-	cout << "The choice is yours, and the consequences may haunt your every step " << endl;
-	cout << "... " << endl << endl; 
+	string fileName = "Story.txt";
+	vector<string> lines31To55 = loadSpecificLines(fileName, 31, 55);
+	processLines(lines31To55);
 	
 
 
@@ -233,22 +222,10 @@ void Game::LeftCreature()
 
 void Game::KilledCreature(const std::string& playerRace)
 {
-	cout << "You.. Killed IT" << endl << endl;
-	cout << "As the creatures life fades, an ominous stillness settles upon" << endl;
-	cout << "the sanctuary. With its last breath the creatures thoughts echo" << endl;
-	cout << "through your mind- a haunting revalation that it was a pacifist," << endl;
-	cout << "a guardian sworn to protect the very forest it inhabited." << endl << endl;
-	cout << "The world around you darkens, as if the shadows themselves" << endl;
-	cout << "mourn the loss of their guardian. Whispers and distant screams" << endl;
-	cout << "permeate the air, carrying with them the weight of a forest left vulnerable." << endl;
-	cout << "The once mutated cries of unseen creatures now crescendo into a canopy of" << endl;
-	cout << "despair." << endl << endl;
-	cout << "You stand alone, the unintended executioner of a silent protector." << endl;
-	cout << "the responsibility to safeguard the sanctuary now falls upon your shoulders." << endl;
-	cout << "Will you honour the fallen guardians last wishes, and slowly turn into" << endl;
-	cout << "creature itself? or will you go on, after all, youre just a " <<playerRace << endl << endl;
-
-
+	string fileName = "Story.txt";
+	vector<string> lines56To73 = loadSpecificLines(fileName, 56, 73);
+	processLines(lines56To73);
+	cout << playerRace << endl << endl << endl << endl << endl; 
 
 	cout << "0: Quit" << endl;
 	cout << "1: Run Away" << endl;
@@ -288,7 +265,10 @@ void Game::KilledCreature(const std::string& playerRace)
 
 void Game::DeathScreen(const std::string& playerName)
 {
-	cout << "You...Died" << endl;
+	string fileName = "Story.txt";
+	vector<string> lines74To75 = loadSpecificLines(fileName, 74, 75);
+	processLines(lines74To75);
+	
 	
 
 
@@ -332,18 +312,9 @@ void Game::DeathScreen(const std::string& playerName)
 
 void Game::MoveMansion(const std::string& playerName)
 {
-	cout << "As you cautiously approach the mansion, the fog seems to thicken," << endl;
-	cout << "swirling around the looming structure like ghostly tendrils." << endl;
-	cout << "The air becomes charged with an unsetlling energy, with distant howls" << endl;
-	cout << "of unkown creatures you've never heard before, ehcoing through the" << endl;
-	cout << "twisted corridors of the forrest" << endl << endl; 
-	cout << "The mansions grand entrance stands before you, its' once" << endl;
-	cout << "opulent facade now marred by time, and an ominous air of" << endl;
-	cout << "malevolance brushes against you. As you step forth towards the gate," << endl;
-	cout << "a creature resembling a phantom apears before you" << endl << endl;
-	cout << "'Be gone foul being!' the creature squeals with a heavy rasp" << endl;
-	cout << "'Your kind doesn't belong here. Tonight you will take your last breath!'" << endl << endl;
-
+	string fileName = "Story.txt";
+	vector<string> lines79To98 = loadSpecificLines(fileName, 79, 98);
+	processLines(lines79To98);
 	
 	cout << "0: Quit" << endl;
 	cout << "1: Character Info" << endl;
