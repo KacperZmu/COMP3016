@@ -1,6 +1,41 @@
 #include "Game.h"
 #include <random>
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
+
+
+vector<string> loadSpecificLines(const string& fileName, int startLine, int endLine) {
+	vector<string> linesToLoad;
+	ifstream inputFile(fileName);
+
+	if (!inputFile.is_open()) {
+		cerr << "error opening the file" << fileName << endl;
+		return linesToLoad;
+	}
+
+	string line;
+	int currentLineNumber = 1;
+
+	while (getline(inputFile, line) && currentLineNumber <= endLine) {
+		if (currentLineNumber >= startLine && currentLineNumber <= endLine) {
+			linesToLoad.push_back(line);
+		}
+
+		++currentLineNumber;
+	}
+	inputFile.close();
+	return linesToLoad;
+
+}
+
+void processLines(const vector<string>& lines) {
+	for (const auto& loadedLines : lines) {
+		cout << loadedLines << endl;
+	}
+}
 
 Game::Game()
 {
@@ -17,6 +52,8 @@ Game::Game()
 	DeathScr = 0;
 	killedCreature = 0;
 	killedCreatureStarted = false;
+
+	
 	
 
 }
@@ -76,23 +113,9 @@ void Game::mainMenu()
 }
 void Game::PlayGame(const std::string& playerName)
 {
-	cout << "Welcome to Murkwood Sanctuary " << playerName <<"! \nDon't let the name fool you. It is far from a sanctuary " << endl << endl; 
-	cout << "MurkWood is a realm cloaked in an ethereal mist \nthat shrouds the ancient tree in an otherworldly haze. " << endl;
-	cout << "As you step cautiously through the forest, the \nair is thick with a mysterious energy, " << endl;
-	cout << "and the soft crunch of fallen leaves beneath \nyour feet echoes through the silence. You hear no other life around you.  " << endl;
-	cout << "The twisted branches above form an intricate \ncanopy that filters the pale moolight, casting an earie glow  " << endl;
-	cout << "on the damp forest floor.  " << endl << endl; 
-	cout << "In the distance lies an imposing mansion, its' \ndark silhouette imposing against the fog laden backdrop.  " << endl;
-	cout << "A palpable aura of corruption emanates from \nits' walls, whispering tales of secrets, long buried within.  " << endl << endl; 
-	cout << "To the Left, a winding stretches endlessly \ninto the unknown, with each visible bend revealing more mysteries than the last.  " << endl;
-	cout << "The air is filled with anticipation as you \nconsider what lies beyond the seemingly infinite trail.  " << endl << endl; 
-	cout << "To the right, a creature of unknown origin \nlurks in the shadows. Its' eyes gleam with an otherworldly intelligence,  " << endl;
-	cout << "and the air around it crackles with a sense of \ndanger. you take a deap breath, the crisp cold air burns inside your lungs, " << endl;
-	cout << "your nose is filled with the scent of death. \nShould you app, be wary, for this mysterious being mat hold the secrets woven\ninto the very fabric of Murkwood Sanctuary.  " << endl <<endl;
-	cout << "The forest beckons,Young " << playerName << ". Will you explore the \ncurrupt mansion halls? brave the unending path" << endl;
-	cout << "or face the enigmatic creature that guards the secrets of this mystic realm?   " << endl << endl;
-	cout << "The choice  " << endl;
-	cout << "Is yours  " << endl << endl; 
+	string fileName = "Story.txt";
+	vector<string> lines1To30 = loadSpecificLines(fileName, 1, 30);
+	processLines(lines1To30);
 	
 
 	cout << "0: Quit" << endl; 
@@ -100,7 +123,7 @@ void Game::PlayGame(const std::string& playerName)
 	cout << "2: Head Towards the Mansion" << endl;
 	cout << "3: Approach the Creature..." << endl; 
 	cout << "4: Time for the never ending story?" << endl << endl;   
-
+	
 
 	
 	cout << endl << "Choice: ";
