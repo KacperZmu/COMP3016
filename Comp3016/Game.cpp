@@ -52,6 +52,20 @@ Game::Game()
 	DeathScr = 0;
 	killedCreature = 0;
 	killedCreatureStarted = false;
+	ShowOffMansion = 0;
+	ShowOffMansionStarted = false;
+	sacrifice = 0;
+	SacrificeStarter = false;
+	soledierOn = 0;
+	soldierOnStarter = false;
+	manCorupt = 0;
+	manCoruptStarted = false;
+	phanAttack = 0;
+	phanAttackStarted = false;
+	phanBattle = 0;
+	phanBattleStarted = false;
+	phanBattleAfter = 0;
+	phanBattleAfterStarted = false;
 
 	
 	
@@ -84,10 +98,18 @@ void Game::mainMenu()
 	cout << "0: Quit" << endl;
 	cout << "1: Character Info" << endl;
 	cout << "2: Play" << endl << endl; 
-
+	
 	cout << endl << "Choice: ";
-	cin >> choice;
+	while (!(cin >> choice) || (choice < 0 || choice > 2))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
+
+	
 
 	switch (choice)
 	{
@@ -116,18 +138,24 @@ void Game::PlayGame(const std::string& playerName)
 	string fileName = "Story.txt";
 	vector<string> lines1To30 = loadSpecificLines(fileName, 1, 30);
 	processLines(lines1To30);
-	
+	character.ResetHealth();
 
 	cout << "0: Quit" << endl; 
 	cout << "1: Character Info" << endl; 
 	cout << "2: Head Towards the Mansion" << endl;
 	cout << "3: Approach the Creature..." << endl; 
-	cout << "4: Time for the never ending story?" << endl << endl;   
+	//cout << "4: Time for the never ending story?" << endl << endl;   
 	
 
 	
 	cout << endl << "Choice: ";
-	cin >> playerChoice;
+	while (!(cin >> playerChoice) || (playerChoice < 0 || playerChoice > 3))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
 	playStarted = true;
 	mansionStarted = false;
@@ -177,7 +205,13 @@ void Game::LeftCreature()
 
 
 	cout << endl << "Choice: ";
-	cin >> leftCreature;
+	while (!(cin >> leftCreature) || (leftCreature < 0 || leftCreature > 2))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
@@ -228,19 +262,133 @@ void Game::KilledCreature(const std::string& playerRace)
 	cout << playerRace << endl << endl << endl << endl << endl; 
 
 	cout << "0: Quit" << endl;
-	cout << "1: Run Away" << endl;
-	cout << "2: Attack the creature" << endl;
+	cout << "1: Soldier On" << endl;
+	cout << "2: Embrace the Guardians Legacy" << endl;
+	character.levelUp();
+
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> killedCreature) || (killedCreature < 0 || killedCreature > 2))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	leftCreatureStarted = false;
+	killedCreatureStarted = true;
+	switch (killedCreature)
+	{
+	case 0:
+		running = false;
+		break;
+
+	case 1:
+		system("CLS");
+		killedCreatureStarted = false;
+		soldierOnStarter = true;
+		SoldierOn();
+		break;
+
+	case 2:
+		system("CLS");
+		SacrificeStarter = true;
+		killedCreatureStarted = false;
+		killedCreature = 0;
+		sacrifice = 0;
+		Sacrifice();
+		break;
+	
+
+
+
+	default:
+		break;
+	}
+
+}
+
+void Game::Sacrifice()
+{
+	string fileName = "Story.txt";
+	vector<string> lines125To142 = loadSpecificLines(fileName, 125, 142);
+	processLines(lines125To142);
+	character.levelUp();
+	
+
+	cout << "0: Quit" << endl;
+	cout << "1: Restart" << endl;
+	
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> sacrifice) || (sacrifice < 0 || sacrifice > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	SacrificeStarter = true;
+	
+	
+	switch (sacrifice)
+	{
+	case 0:
+		running = false;
+		break;
+	case 1:
+		system("CLS");
+		playStarted = true;
+		playerChoice = 0;
+		leftCreature = 0;
+		PlayGame(character.getName());
+		break;
+
+
+
+
+	default:
+		break;
+	}
+
+}
+
+void Game::SoldierOn()
+{
+	string fileName = "Story.txt";
+	vector<string> lines145To163 = loadSpecificLines(fileName, 145, 163);
+	processLines(lines145To163);
+
+
+
+
+
+	cout << "0: Quit" << endl;
+	cout << "1: Restart" << endl;
+
 
 
 
 
 
 	cout << endl << "Choice: ";
-	cin >> killedCreature;
+	while (!(cin >> soledierOn) || (soledierOn < 0 || soledierOn > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
-	switch (killedCreature)
+	switch (soledierOn)
 	{
 	case 0:
 		running = false;
@@ -253,7 +401,7 @@ void Game::KilledCreature(const std::string& playerRace)
 		leftCreature = 0;
 		PlayGame(character.getName());
 		break;
-	
+
 
 
 
@@ -262,6 +410,7 @@ void Game::KilledCreature(const std::string& playerRace)
 	}
 
 }
+
 
 void Game::DeathScreen(const std::string& playerName)
 {
@@ -282,7 +431,13 @@ void Game::DeathScreen(const std::string& playerName)
 
 
 	cout << endl << "Choice: ";
-	cin >> DeathScr;
+	while (!(cin >> DeathScr) || (DeathScr < 0 || DeathScr > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
@@ -317,17 +472,22 @@ void Game::MoveMansion(const std::string& playerName)
 	processLines(lines79To98);
 	
 	cout << "0: Quit" << endl;
-	cout << "1: Character Info" << endl;
-	cout << "2: Head Back" << endl;
-	cout << "3: Show off your physical prowess" << endl;
-	cout << "4: Attack the creature" << endl;
-	cout << "5: Try to reason" << endl;
+	cout << "1: Head Back" << endl;
+	cout << "2: Show off your physical prowess" << endl;
+	cout << "3: Attack the creature" << endl;
+	
 	
 
 
 	
 	cout << endl << "Choice: ";
-	cin >> moveMansion;
+	while (!(cin >> moveMansion) || (moveMansion < 0 || moveMansion > 3))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
 	cout << endl;
 	mansionStarted = true;
 	playStarted = false;
@@ -337,17 +497,25 @@ void Game::MoveMansion(const std::string& playerName)
 		running = false;
 		break;
 
+	
 	case 1:
-		system("CLS");
-		character.printPlayeStats();
-		break;
-	case 2:
 		system("CLS");
 		playStarted = true;
 		playerChoice = 0;
 		moveMansion = 0;
 		PlayGame(character.getName());
 		break;
+	case 2:
+		system("CLS");
+		playerChoice = 0;
+		moveMansion = 0;
+		ShowOffMansions();
+
+	case 3:
+		system("CLS");
+		moveMansion = 0;
+		mansionStarted = false;
+		PhanAttack(character.getName());
 
 
 
@@ -356,3 +524,298 @@ void Game::MoveMansion(const std::string& playerName)
 	}
 
 }
+
+
+void Game::PhanAttack(const std::string& playerName)
+{
+	cout << playerName << endl;
+	string fileName = "Story.txt";
+	vector<string> lines191To198 = loadSpecificLines(fileName, 191, 198);
+	processLines(lines191To198);
+	character.levelUp();
+
+	cout << "0: Quit" << endl;
+	cout << "1: Fight" << endl;
+
+	
+
+
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> phanAttack) || (phanAttack < 0 || phanAttack > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	phanAttackStarted = true;
+	mansionStarted = false;
+	switch (phanAttack)
+	{
+	case 0:
+		running = false;
+		break;
+
+
+	case 1:
+		system("CLS");
+		PhanBattle(character.getName());
+
+		
+		break;
+		
+
+	default:
+		break;
+	}
+
+}
+
+void Game::PhanBattle(const std::string& playerName)
+{
+	int enemyHealth = 60;
+	phanBattleStarted = true;
+	
+	while (character.getHP() > 0 && enemyHealth > 0) {
+		cout << "Phantom Health: " << enemyHealth << endl;
+		cout << playerName << " Health: " << character.getHP() << " / " << character.getHPMax() << endl << endl << endl;
+
+
+		cout << "0: Quit" << endl;
+		cout << "1: Fight" << endl;
+
+		cout << endl << "Choice: ";
+		while (!(cin >> phanBattle) || (phanBattle < 0 || phanBattle > 1))
+		{
+			cout << "Invalid Input" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+		}
+		cout << endl;
+		phanBattleStarted = true;
+		phanAttackStarted = false;
+		switch (phanBattle)
+		{
+		case 0:
+			running = false;
+			break;
+
+
+		case 1:
+		{
+			system("CLS");
+			random_device rd;
+			mt19937 gen(rd());
+			uniform_int_distribution<> dis(character.getDamageMin(), character.getDamageMax());
+			int playerDamage = dis(gen);
+
+			uniform_int_distribution<> enemyDis(2, 16);
+			int enemyDamage = enemyDis(gen);
+			cout << playerName << " dealt " << playerDamage << " damage to the Phantom! " << endl;
+			cout << "Phantom dealt " << enemyDamage << " " << playerName << endl << endl;
+			enemyHealth -= playerDamage;
+
+			if (enemyHealth <= 0)
+			{
+				cout << "You Defeated the Phantom!" << endl;
+				character.levelUp();
+				PhanBattleAfter();
+			}
+			else
+			{
+				character.takeDamage(enemyDamage);
+
+				if (character.getHP() <= 0)
+				{
+					cout << "You were defeated by the Phantom!" << endl << endl << endl;
+					DeathScreen(character.getName());
+				}
+			}
+			break;
+		}
+
+
+		default:
+			break;
+		}
+
+	}	
+
+}
+
+
+
+
+
+void Game::ShowOffMansions()
+{
+	
+	string fileName = "Story.txt";
+	vector<string> lines100To103 = loadSpecificLines(fileName, 100, 103);
+	processLines(lines100To103);
+	string fileNames = "Story.txt";
+	vector<string> lines246To283 = loadSpecificLines(fileNames, 246, 283);
+	processLines(lines246To283);
+	string fileNamee = "Story.txt";
+	vector<string> lines104To122 = loadSpecificLines(fileNamee, 104, 122);
+	processLines(lines104To122);
+	character.levelUp();
+	
+
+	
+
+
+	cout << "0: Quit" << endl;
+	cout << "1: Head Back" << endl;
+	cout << "2: Go Forth" << endl;
+	
+
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> ShowOffMansion) || (ShowOffMansion < 0 || ShowOffMansion > 2))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	ShowOffMansionStarted = true;
+	mansionStarted = false;
+	switch (ShowOffMansion)
+	{
+	case 0:
+		running = false;
+		break;
+
+
+	case 1:
+		system("CLS");
+		playStarted = true;
+		ShowOffMansion = 0;
+		moveMansion = 0;
+		PlayGame(character.getName());
+		break;
+	case 2:
+		system("CLS");
+		ShowOffMansion = 0;
+		ShowOffMansionStarted = false;
+		ManCoruption();
+		break;
+
+
+
+
+	default:
+		break;
+	}
+
+}
+
+void Game::ManCoruption()
+{
+	string fileName = "Story.txt";
+	vector<string> lines166To187 = loadSpecificLines(fileName, 166, 187);
+	processLines(lines166To187);
+
+	cout << "0: Quit" << endl;
+	cout << "1: Restart" << endl;
+
+
+
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> manCorupt) || (manCorupt < 0 || manCorupt > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	manCoruptStarted = true;
+	ShowOffMansionStarted = false;
+	switch (manCorupt)
+	{
+	case 0:
+		running = false;
+		break;
+
+	case 1:
+		system("CLS");
+		playStarted = true;
+		playerChoice = 0;
+		leftCreature = 0;
+		PlayGame(character.getName());
+		break;
+
+
+
+
+	default:
+		break;
+	}
+
+}
+
+void Game::PhanBattleAfter()
+{
+	string fileName = "Story.txt";
+	vector<string> lines205To242 = loadSpecificLines(fileName, 205, 242);
+	processLines(lines205To242);
+
+	cout << "0: Quit" << endl;
+	cout << "1: Restart" << endl;
+
+
+
+
+
+
+	cout << endl << "Choice: ";
+	while (!(cin >> phanBattleAfter) || (phanBattleAfter < 0 || phanBattleAfter > 1))
+	{
+		cout << "Invalid Input" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+	}
+	cout << endl;
+	manCoruptStarted = false;
+	phanBattleAfterStarted = true;
+	switch (phanBattleAfter)
+	{
+	case 0:
+		running = false;
+		break;
+
+	case 1:
+		system("CLS");
+		playStarted = true;
+		playerChoice = 0;
+		leftCreature = 0;
+		PlayGame(character.getName());
+		break;
+
+
+
+
+	default:
+		break;
+	}
+
+}
+
+
+
+
+

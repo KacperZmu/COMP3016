@@ -1,5 +1,5 @@
-"Welcome to Murkwood Sanctuary Don't let the name fool you. It is far from a sanctuary 
-MurkWood is a realm cloaked in an ethereal mist that shrouds the ancient tree in an otherworldly haze.
+"Welcome to Murkwood Sanctuary Adventurer! Don't let the name fool you. It is far from a sanctuary. 
+MurkWood is a realm cloaked in an ethereal mist that shrouds the ancient trees in an otherworldly haze.
 As you step cautiously through the forest, the air is thick with a mysterious energy, 
 and the soft crunch of fallen leaves beneath your feet echoes through the silence. You hear no other life around you.  
 The twisted branches above form an intricate canopy that filters the pale moolight, casting an earie glow  
@@ -12,8 +12,8 @@ The air is filled with anticipation as you consider what lies beyond the seeming
 
 "To the right, a creature of unknown origin lurks in the shadows. Its' eyes gleam with an otherworldly intelligence, 
 and the air around it crackles with a sense of danger. you take a deap breath, the crisp cold air burns inside your lungs, 
-your nose is filled with the scent of death. Should you app, be wary, for this mysterious being mat hold the secrets woven into the very fabric of Murkwood Sanctuary.  
-The forest beckons,Young Adventurer Will you explore the currupt mansion halls? brave the unending path
+your nose is filled with the scent of death. Should you approach, be wary, for this mysterious being may hold the secrets woven into the very fabric of Murkwood Sanctuary.  
+The forest beckons, Young Adventurer, Will you explore the currupt mansion halls? brave the unending path
 or face the enigmatic creature that guards the secrets of this mystic realm?   " 
 
 "The choice  " 
@@ -26,7 +26,7 @@ or face the enigmatic creature that guards the secrets of this mystic realm?   "
 
 
 
-GoingRight
+
 
 "As you cautiously veer right, your gaze fixates on the mysterious 
 creature lurking in the shadows. The air thickens with an eerie 
@@ -36,7 +36,7 @@ emerges slowly from the darkness. "
 
 "A low, gutteral growl resonates through the air, sending shivers  
 down your spine. The creatures' eyes lock onto yours. 
-Its' features obscured by the foggy veil. Inseed whispers 
+Its' features obscured by the foggy veil. Helish whispers 
 seem to emanate from its presence, weaving a chilling tapestry of 
 unknown horrors. "
  
@@ -52,13 +52,13 @@ The choice is yours, and the consequences may haunt your every step
 
 
 
-Killing it
+
 "You.. Killed IT"
 
 
 "As the creatures life fades, an ominous stillness settles upon
 the sanctuary. With its last breath the creatures thoughts echo 
-through your mind- a haunting revalation that it was a pacifist,
+through your mind- a haunting revalation that it was
 a guardian sworn to protect the very forest it inhabited."
 
 "The world around you darkens, as if the shadows themselves
@@ -75,7 +75,7 @@ Death
 "You...Died" 
 
 
-GoingMansion1
+
 "As you cautiously approach the mansion, the fog seems to thicken, 
 swirling around the looming structure like ghostly tendrils. 
 The air becomes charged with an unsetlling energy, with distant howls 
@@ -96,7 +96,99 @@ a creature resembling a phantom apears before you"
 
 
 
-98
+
+"In a moment of pure stupidity as you are over ran with adrenaline,
+you decide to showcase your brovado. With a theatrical flair, you strike a pose-
+a lat spread that could rival demiGods, followed by a front double Bicep
+display that even statues envy."
+
+"To your surprise, the phantom seems to pause, as if taken aback by the
+unexpected display of your physical prowess, its' mouth ajar, chin shivering.
+A phantom, ethereal and intangible, impervious to physical damage from the mortal realm.
+Yet your theatrics appear to have disrupted its ghostly composure."
+
+"You, a meer mortal, find yourself in a peculiar position of intimidating a ghost.
+the phantom retreats, its once imposing presence now overshadowed by your flexing muscles.
+The supernatural equilibrium appears momentarily disrupted as the phantom flickers and stutters 
+in fear"
+
+"You stand in utter disbelief that this worked. you can now go forth and enter the mansion, once guarded by
+an eerie phantom, now left for anyone to explore"
+
+
+
+
+
+
+
+
+"As you stand amidst the haunting stillness, a profound realization dawns upon you. 
+The weight of the guardian's sacrifice becomes a mantle, and with a resolute heart, you decide to honor its final wishes. 
+The air thickens with ancient magic, and an unseen force begins to intertwine with your very essence."
+
+"Slowly, imperceptibly at first, you feel a transformation taking hold. 
+The guardian's essence merges with yours, and your body undergoes a metamorphosis. 
+Your limbs elongate, and ethereal patterns trace across your skin like ancient runes. 
+The forest responds to your transformation, whispering gratitude through rustling leaves and gentle caresses of unseen hands."
+
+"You have become the new guardian, a symbiotic entity tasked with protecting the sanctuary. 
+The once-forgotten responsibility now courses through your veins, and you stand as a testament 
+to the enduring bond between the guardian and the Forest."
+
+
+
+
+
+
+
+
+"Unable to bear the weight of the unintended consequences, you choose to forge ahead, 
+leaving the guardian's legacy behind. The sanctuary, now left defenseless, 
+echoes with anguished cries and haunting whispers. The air itself seems to mourn the absence of a guardian, 
+and the once serene surroundings turn into a dissonance of torment."
+
+"As you venture deeper, guilt gnaws at your sanity. The forest's despair becomes your constant companion, 
+and the spectral screams of unseen creatures echo in your mind. Shadows flicker at the periphery of your vision, 
+and the whispers intensify into an incessant chorus of accusing voices."
+
+"Driven to the brink of madness, you grapple with your own sanity"
+
+
+'Goodbye...'
+
+
+
+
+
+
+
+
+"As you revel in your unexpected triumph, unaware of the sinister consequences, the corruption 
+within the mansion seizes the opportunity presented by your display of bravado. The malevolent energy, 
+once contained within the decaying walls, surges forth like an insatiable tide, 
+drawn to the audacity that disrupted the phantom's ghostly composure."
+
+"Unbeknownst to you, the very act that frightened the phantom becomes the catalyst for your own undoing. 
+The corruption wraps around you like tendrils of darkness, seeping through every pore and crevice. 
+It whispers promises of power and control, luring you deeper into the mansion's abyss."
+
+"As you venture further, the corruption takes root in your mind, driving you to the edge of madness. 
+Shadows dance with malicious glee, and the once-stable reality within the mansion warps into a nightmarish tableau. 
+Unearthly whispers fill your ears, urging you to embrace the malevolent force that now courses through your veins."
+
+"The sanctuary now trembles as the corruption extends its influence. The forest itself succumbs to the malevolence, 
+twisting into grotesque forms and echoing with the tortured cries of its inhabitants. You, the unwitting catalyst, 
+become a vessel for the very evil that the mansion harbored."
+
+"The sanctuary, once serene, now stands corrupted and tainted by your actions."
+
+
+
+
+
+
+
+"Prepare for battle!"
 
 
 
@@ -108,4 +200,84 @@ a creature resembling a phantom apears before you"
 
 
 
- 
+
+
+"As you bask in the glory of your hard-fought victory over the phantom, a deceptive calm settles within the mansion's walls. 
+Unbeknownst to you, your triumphant moment becomes the linchpin for a darker turn of events. 
+The malevolent energies that once dwelled within the decaying confines of the mansion, held at bay by the 
+phantom's spectral presence, are now unleashed, drawn to the void left in the wake of its defeat."
+
+"The tendrils of corruption, once confined to the mansion, begin to slither outward, eager to exploit the 
+vulnerability exposed by your success. As you navigate the now-silent corridors, the insidious darkness 
+wraps around you, insinuating itself into your very essence. Whispers of dominion and supremacy echo through 
+the hallowed halls, weaving a sinister symphony that entices you to delve deeper into the abyss of Murkwood Sanctuary."
+
+"With every step, the corruption takes root, infiltrating your thoughts and desires with promises of unparalleled power. 
+The mansion's reality warps around you, morphing into a nightmarish landscape where shadows twist with malevolent delight. 
+Unearthly murmurs fill the air, coaxing you to embrace the malevolent force that courses through your veins."
+
+"Beyond the mansion's walls, Murkwood Sanctuary shudders as the corruption spreads its tendrils into the once-vibrant forest. 
+The sanctuary succumbs to grotesque transformations, its serene beauty replaced by twisted 
+abominations that echo with the anguished cries of its inhabitants. Unwittingly, 
+you become the harbinger of the very evil the mansion concealed."
+
+"Murkwood Sanctuary, once a bastion of peace, now stands at the precipice of corruption, 
+tainted by the unintended consequences of your triumph. Will you succumb to the darkness that beckons, 
+or will you find a way to cleanse the sanctuary and rid yourself of the malevolent influence t
+hat threatens to consume all? The choices you make will determine the destiny of the mansion, 
+the forest, 
+and 
+...
+your own 
+...
+soul."
+
+
+
+
+
+
+
+
+
+
+..........,...........................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,........................
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,**,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,(###/,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*******/%&&&%/,,,,********************************(%#%((#(,,,,
+,,,,,//*/*,*,,,,,,,*************************,*,,,,/,,,,...*****************************##*(*#(*/*..,
+,*(#%#%&%&(**,*,*************************,*/*,,*//**,,.  ,,.***************************,,....,*..   
+,,#((#.,###/,,*,,***********************.           .*,..,..*******************************,*,.     
+*. ....   .,*************************...                    .,********************************.     
+,,,......,***************************,..  ..                 .,******************************/,.    
+***. . .,/***************************,.   ......      .        ,****************************((*..   
+***.....,/************************/***.    ,,**,..  ...         ,*///////////////////*/*/*/##(*,,.  
+***....,,/(/******///////////////////, .   ...        .         ,////////////////////////(##(((/,.  
+***..,,**/(#(//////////////(%&&&&&&&%(*.   .....             . /%&&&&&%%%((////%%%%%%///##(((*//*.. 
+*/*.,,*//(#((#(////##%##(###%%%%&&&&&%*,  .,,.....          ,#%%&%%%%#(/**//%%%%#%%%%#######/*,,... 
+//*.,,**/(((((((#%%%%&%&%(***/(##%%%/*///*,/,.....    ..  .../####((/*,...,%%###((///(/((##(,*.. .. 
+///,.,,//*/((#((((((((#(###/ /##%%%/.,,,,...(/,...,*//....,,,,#####(//. ./((/**,,,.......,*.,..   .*
+////,.....*/(,,,.,,,,.,**....,*(##(.,,,*#((//,.**,..,(//(//**.(#((/*,.  .   ... .     ......   . ,/(
+////// .....,............     .*/( ..,,((((((//,///((*./((//**,//*,           ..             .*((/(/
+////////.................   ....,....,/////*///(*//((///*   ,, ,.        .//*,. .   ..*(((((((((((((
+/////(///(((///*,,....,,/(((/,...    ,*******/*/***/***,                .*((((((((((((((((((((((((((
+///((((((((((((((((((((((((((,,..    ,,.,*,**,/***,*,,,                 ,(((((((((((((((((((((((((((
+(((((((((((((((((((((((((((((*,,    ..      ..**,,,,..               . .((((((((((((((((((((((((((((
+((((((((((((((((((((((((((((((*.    ..         ,**,..                .,#((((###############(((((((((
+,,,,,,,,,,,,*******,,,,,,,,,,*,    ..                                .*,**************,,**********,,
+,,,,,,,,,,,,,******,,,,,,,,,,,*.   ..                               .*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,*,,,,,,,**,,,,*,   .  ...                          .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,**,,,,**.     ..... ...                    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,     ....    ..                   .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,      ...    ..                  ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.       .      ..                 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                .                 .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.                                 .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.                            .    .,,,.,...............,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.                                   .....................,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,             .                .      ......................,,,,,,,,,
+
+
+
+

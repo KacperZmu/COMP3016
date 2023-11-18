@@ -2,9 +2,6 @@
 
 Character::Character()
 {
-	this->xPos = 0.0;
-	this->yPos = 0.0;
-
 	this->name = "";
 	this->race = "";
 	this->level = 0;
@@ -59,9 +56,6 @@ void Character::printPlayeStats() const
 
 void Character::levelUp()
 {
-	while (exp >= expNext)
-	{
-		exp -= expNext;
 		level++;
 		damageMax = damageMax + 2;
 		damageMin = damageMin + 2;
@@ -71,10 +65,25 @@ void Character::levelUp()
 		mana = mana + 10;
 		defence = defence + 3;
 		this->expNext = 100;
-	}
+	
 	
 	
 	
 
+}
+
+void Character::takeDamage(int damage)
+{
+	hp -= damage;
+	if (hp < 0)
+	{
+		hp = 0;
+	}
+
+}
+
+void Character::ResetHealth()
+{
+	hp = hpMax;
 }
 

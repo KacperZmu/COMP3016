@@ -14,10 +14,10 @@ public:
 	void init(const string name, const string race);
 	void printPlayeStats() const;
 	void levelUp();
+	void takeDamage(int damage);
+	void ResetHealth();
 
-	//Accessors
-	inline const double& getXPos() const { return this->xPos; }
-	inline const double& getYPos() const { return this->yPos; }
+	
 	inline const string& getName() const { return this->name; }
 	inline const string& getRace() const { return this->race; }
 	inline const int& getLevel() const { return this->level; }
@@ -30,7 +30,7 @@ public:
 	inline const int& getDamageMin() const { return this->damageMin; }
 	inline const int& getDamageMax() const { return this->damageMax; }
 	inline const int& getDefence() const { return this->defence; }
-	//Modifiers
+	
 
 private:
 	double xPos;

@@ -11,9 +11,9 @@ public:
 	Game();
 	virtual ~Game();
 
-	//Operators
+	
 
-	//Functions
+	
 	void initGame();
 	void mainMenu();
 	void PlayGame(const std::string& playerName);
@@ -21,9 +21,18 @@ public:
 	void LeftCreature();
 	void DeathScreen(const std::string& playerName);
 	void KilledCreature(const std::string& playerRace);
-	//Accessors
+	void ShowOffMansions();
+	void Sacrifice();
+	void SoldierOn();
+	void ManCoruption();
+	void PhanAttack(const std::string& playerName);
+	void PhanBattle(const std::string& playerName);
+	void PhanBattleAfter();
+
+	
 	inline bool getRunning() const { return this->running; }
-	//Modifiers
+	
+	
 private:
 	int choice;
 	bool running;
@@ -37,6 +46,20 @@ private:
 	int DeathScr;
 	int killedCreature;
 	bool killedCreatureStarted;
+	int ShowOffMansion;
+	bool ShowOffMansionStarted;
+	int sacrifice;
+	bool SacrificeStarter;
+	int soledierOn;
+	bool soldierOnStarter;
+	int manCorupt;
+	bool manCoruptStarted;
+	int phanAttack;
+	bool phanAttackStarted;
+	int phanBattle;
+	bool phanBattleStarted;
+	int phanBattleAfter;
+	bool phanBattleAfterStarted;
 
 	//Character
 	Character character;
