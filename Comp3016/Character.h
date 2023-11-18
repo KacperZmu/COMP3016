@@ -33,8 +33,7 @@ public:
 	
 
 private:
-	double xPos;
-	double yPos;
+	
 
 	string name;
 	string race;

@@ -23,8 +23,7 @@ Character ::~Character()
 
 void Character::init(const string name, const string race)
 {
-	this->xPos = 0.0;
-	this->yPos = 0.0;
+	
 
 	this->name = name;
 	this->race = race;
