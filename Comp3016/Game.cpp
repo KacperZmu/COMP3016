@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-
+//Printing lines from txt file - used for story
 vector<string> loadSpecificLines(const string& fileName, int startLine, int endLine) {
 	vector<string> linesToLoad;
 	ifstream inputFile(fileName);
@@ -99,6 +99,7 @@ void Game::mainMenu()
 	cout << "1: Character Info" << endl;
 	cout << "2: Play" << endl << endl; 
 	
+	// getting user input, checking if valid
 	cout << endl << "Choice: ";
 	while (!(cin >> choice) || (choice < 0 || choice > 2))
 	{
@@ -107,10 +108,12 @@ void Game::mainMenu()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
 	cout << endl;
 
 	
-
+	//switch cases - depending on user choice, do the following
 	switch (choice)
 	{
 	case 0:
@@ -135,6 +138,7 @@ void Game::mainMenu()
 }
 void Game::PlayGame(const std::string& playerName)
 {
+	//uses the starting print - set which lines to print
 	string fileName = "Story.txt";
 	vector<string> lines1To30 = loadSpecificLines(fileName, 1, 30);
 	processLines(lines1To30);
@@ -144,7 +148,7 @@ void Game::PlayGame(const std::string& playerName)
 	cout << "1: Character Info" << endl; 
 	cout << "2: Head Towards the Mansion" << endl;
 	cout << "3: Approach the Creature..." << endl; 
-	//cout << "4: Time for the never ending story?" << endl << endl;   
+	
 	
 
 	
@@ -156,6 +160,7 @@ void Game::PlayGame(const std::string& playerName)
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	playStarted = true;
 	mansionStarted = false;
@@ -212,6 +217,7 @@ void Game::LeftCreature()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
@@ -232,11 +238,12 @@ void Game::LeftCreature()
 		system("CLS");
 		playerChoice = 0;
 		leftCreature = 0;
+		//randomly choose number, if over 6, player kills creature, else they die
 		random_device rd;
 		mt19937 gen(rd());
 		uniform_int_distribution<> dis(1, 20);
 		int randomNumber = dis(gen);
-		if (randomNumber > 8) {
+		if (randomNumber > 6) {
 			KilledCreature(character.getRace());
 			break;
 		}
@@ -277,6 +284,7 @@ void Game::KilledCreature(const std::string& playerRace)
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	leftCreatureStarted = false;
 	killedCreatureStarted = true;
@@ -333,6 +341,7 @@ void Game::Sacrifice()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	SacrificeStarter = true;
 	
@@ -385,6 +394,7 @@ void Game::SoldierOn()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
@@ -438,6 +448,7 @@ void Game::DeathScreen(const std::string& playerName)
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	leftCreatureStarted = true;
 	playStarted = false;
@@ -488,6 +499,7 @@ void Game::MoveMansion(const std::string& playerName)
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	mansionStarted = true;
 	playStarted = false;
@@ -551,6 +563,7 @@ void Game::PhanAttack(const std::string& playerName)
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	phanAttackStarted = true;
 	mansionStarted = false;
@@ -579,7 +592,7 @@ void Game::PhanBattle(const std::string& playerName)
 {
 	int enemyHealth = 60;
 	phanBattleStarted = true;
-	
+	// here we have a battle, while both have health, do this
 	while (character.getHP() > 0 && enemyHealth > 0) {
 		cout << "Phantom Health: " << enemyHealth << endl;
 		cout << playerName << " Health: " << character.getHP() << " / " << character.getHPMax() << endl << endl << endl;
@@ -596,6 +609,7 @@ void Game::PhanBattle(const std::string& playerName)
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 		}
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		cout << endl;
 		phanBattleStarted = true;
 		phanAttackStarted = false;
@@ -608,24 +622,29 @@ void Game::PhanBattle(const std::string& playerName)
 
 		case 1:
 		{
+			//random player damage is set per round, based on damage form the player class
 			system("CLS");
 			random_device rd;
 			mt19937 gen(rd());
 			uniform_int_distribution<> dis(character.getDamageMin(), character.getDamageMax());
 			int playerDamage = dis(gen);
 
+			//random danage is set, between 2 and 16 for the enemy
 			uniform_int_distribution<> enemyDis(2, 16);
 			int enemyDamage = enemyDis(gen);
 			cout << playerName << " dealt " << playerDamage << " damage to the Phantom! " << endl;
 			cout << "Phantom dealt " << enemyDamage << " " << playerName << endl << endl;
+			//enemy takes damage chosen randomly for player damage
 			enemyHealth -= playerDamage;
 
+			//if enemy health 0, end battle and take player further
 			if (enemyHealth <= 0)
 			{
 				cout << "You Defeated the Phantom!" << endl;
 				character.levelUp();
 				PhanBattleAfter();
 			}
+			//if the enemy still has health, take enemy damage from player health
 			else
 			{
 				character.takeDamage(enemyDamage);
@@ -686,6 +705,7 @@ void Game::ShowOffMansions()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	ShowOffMansionStarted = true;
 	mansionStarted = false;
@@ -741,6 +761,7 @@ void Game::ManCoruption()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	manCoruptStarted = true;
 	ShowOffMansionStarted = false;
@@ -789,6 +810,7 @@ void Game::PhanBattleAfter()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
 	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << endl;
 	manCoruptStarted = false;
 	phanBattleAfterStarted = true;
