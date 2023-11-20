@@ -52,5 +52,5 @@
 ##### This is a short game, with minor RPG aspects, focussed on story and decision making. some decisions will improve the world
 ##### while others might make it worse.
 
-##### Git: https: //github.com/KacperZmu/COMP3016
-##### YouTube: https://www.youtube.com/watch?v=qr9d5a0s75I&ab_channel=Kacper
+##### [GitHub](https://github.com/KacperZmu/COMP3016)
+##### [YouTube](https://www.youtube.com/watch?v=qr9d5a0s75I&ab_channel=Kacper)
