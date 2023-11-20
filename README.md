@@ -16,6 +16,9 @@
 ##### of creature. both are described, then the player chooses whether they would like to go towards the mansion
 ##### or creature. after each choice, extra story elements are given. player goes through this cycle till either 
 ##### the end or the player finds themselves in a battle situation ending in either victory or death.
+##### input from player starts with string for the name, followed by choice in the form of integers
+##### such as 1, 2, 3. each integers choice is shown on screen, telling the player what will happen
+##### should they make the choice
 
 ![Screenshot](UML.png)
 
@@ -43,6 +46,11 @@
 ##### with slight RPG elements such as a battle, and leveling. the player levels when defeating an enemy.
 ##### levels continue upon death should the player die from battle.
 
+
+### USP
+
+##### This is a short game, with minor RPG aspects, focussed on story and decision making. some decisions will improve the world
+##### while others might make it worse.
 
 ##### Git: https: //github.com/KacperZmu/COMP3016
 ##### YouTube: https://www.youtube.com/watch?v=qr9d5a0s75I&ab_channel=Kacper
